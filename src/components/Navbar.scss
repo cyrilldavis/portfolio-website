@@ -1,0 +1,128 @@
+@import '../Global.scss';
+
+
+
+.navbar{
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    color: $mainColor;
+    position: fixed;
+    z-index: 3;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: space-between;
+    transition: all 1s ease;
+
+    .left{
+        height: 70px;
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+
+        .logo{
+            font-size: 30px;
+            font-weight: 700;
+            text-decoration: none;
+            color: inherit;
+        }
+        .resume{
+            margin-left: 800px;
+            background-color: $mainColor;
+           
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 1s ease;
+
+            a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+        .info{
+            display: flex;
+            align-items: center;
+            margin-left: 40px;
+
+            @include mobile{
+                display: none;
+            }
+
+            .text{
+                margin-left: 5px;
+                font-size: 12px;
+                font-weight: 500;
+            }
+
+            .icon{
+                font-size: 15px;
+            }
+        }
+    }
+
+    .right{
+        width: 32px;
+        height: 70px;
+        margin-right: 30px;
+        
+        
+
+        .hamburger{
+            width: 32px;
+            height: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            margin: 22.5px 0;
+            overflow-y: hidden;
+            
+            
+            
+            span{
+                width: 32px;
+                height: 3px;
+                background-color: $mainColor;
+                transform-origin: left;
+                transition: all 1s ease;
+                
+            }
+        }
+    }
+
+    &.active{
+        background-color: $mainColor;
+        color: white;
+
+        .resume{
+            opacity: 0;
+        }
+        
+
+        .hamburger{
+
+            span{
+                &:first-child{
+                    background-color: white;
+                    transform: rotate(45deg);
+                    
+                }
+                &:nth-child(2){
+                    opacity: 0;
+                }
+                &:last-child{
+                    background-color: white;
+                    transform: rotate(-45deg);
+                    
+                }
+            }
+        }
+    }
+
+}
+

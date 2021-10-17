@@ -1,0 +1,145 @@
+@import '../Global.scss';
+
+.works{
+    background-color: crimson;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .arrow{
+        height: 50px;
+        position: absolute;
+        cursor: pointer;
+
+        @include mobile{
+            display: none;
+        }
+
+        &.left{
+            left: 100px;
+            transform: rotateY(180deg);
+        }
+
+        &.right{
+            right: 100px;
+        }
+    }
+
+    .slider{
+        height: 350px;
+        display: flex;
+        position: absolute;
+        left: 0;
+        transition: all 1s ease-out;
+
+        @include mobile{
+            flex-direction: column;
+            height: 80vh;
+            justify-content: center;
+        }
+        .container{
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include mobile{
+                
+                height: 100%;
+            }
+           
+
+            .item{
+                width: 700px;
+                height: 100%;
+                background-color: white;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include mobile{
+                    width: 90%;
+                    height: 160px;
+                    margin: 10px;
+                }
+
+                .left{
+                    flex: 4;
+                    height: 80%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .leftC{
+                        width: 90%;
+                        height: 70%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        @include mobile{
+                            height: 90%;
+                        }
+                        
+
+                        .imgC{
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            background-color: rgb(255, 169, 138);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-bottom: 4px;
+
+                            @include mobile{
+                                
+                            }
+
+                            img{
+                                width: 25px;
+                            }
+                        }
+                        h2{
+                            font-size: 20px;
+                            @include mobile{
+                                font-size: 12px;
+                                
+                            }
+                        }
+                        p{
+                            font-size: 13px;
+                            margin-bottom: 4px;
+                            overflow: hidden;
+                            @include mobile{
+                                font-size: 6px;
+                            }
+                        }
+                        span{
+                            font-size: 12px;
+                            font-weight: 600;
+                            text-decoration: underline;
+                            cursor: pointer;
+                            @include mobile{
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+                .right{
+                    flex: 8;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+
+                    img{
+                        transform: rotate(-10deg);
+                    }
+                    
+                }
+            }
+        }
+    }
+}

@@ -19,7 +19,7 @@ const Navbar = (props) => {
                     <span className='text'>cyrilldavis22@gmail.com</span>
                 </div>
                 <div className="resume">
-                    <a href='/Doc/Resume.pdf' download>Download CV</a>
+                    <a href='/Doc/Resume1.pdf' download>Download CV</a>
                 </div>
             </div>
 

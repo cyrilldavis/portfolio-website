@@ -25,6 +25,10 @@
             font-weight: 700;
             text-decoration: none;
             color: inherit;
+
+            @include mobile{
+                width: 100%;
+            }
         }
         .resume{
             margin-left: 800px;
@@ -41,6 +45,10 @@
             a{
                 text-decoration: none;
                 color: white;
+            }
+
+            @include mobile{
+                display: none;
             }
         }
 
@@ -81,6 +89,8 @@
             cursor: pointer;
             margin: 22.5px 0;
             overflow-y: hidden;
+
+        
             
             
             

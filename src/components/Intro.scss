@@ -48,8 +48,67 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+
         
         
+      .skillset{
+          margin-left: 50px;
+          margin-top: 20px;
+          .title{
+              font-weight: 500;
+          }
+          .skills1{
+              display: flex;
+              margin-top: 10px;
+              .start{
+                background-color: $mainColor;
+                padding: 3px 7px;
+                border-radius: 10px;
+                color: white;
+                font-size: 12px;
+                justify-content: center;
+                align-items: center;
+                
+              }
+             
+              .s1{
+                background-color: $mainColor;
+                padding: 3px 7px;
+                border-radius: 10px;
+                color: white;
+                font-size: 12px;
+                justify-content: center;
+                align-items: center;
+                margin-left: 10px;
+                
+            }
+          }
+          .skills2{
+              display: flex;
+              margin-top: 10px;
+              .start{
+                background-color: $mainColor;
+                padding: 3px 7px;
+                border-radius: 10px;
+                color: white;
+                font-size: 12px;
+                justify-content: center;
+                align-items: center;
+                
+              }
+              .s1{
+                background-color: $mainColor;
+                padding: 3px 7px;
+                border-radius: 10px;
+                color: white;
+                font-size: 12px;
+                justify-content: center;
+                align-items: center;
+                margin-left: 10px;
+                
+            }
+          }
+      }
         
 
         .wrapper{
@@ -107,25 +166,6 @@
                 font-weight: 600;
             }
         }
-        a{
-            position: absolute;
-            bottom: 10px;
-            left: 40%;
-
-            @include mobile{
-                left: 45%;
-            }
-            
-            img{
-                width: 30px;
-                animation: arrowBlink 2s infinite;
-            }
-
-            @keyframes arrowBlink{
-                100%{
-                    opacity: 0;
-                }
-            }
-        }
+    
     }
 }
